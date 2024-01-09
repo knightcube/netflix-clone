@@ -8,3 +8,5 @@ export const API_OPTIONS = {
     Authorization: import.meta.env.VITE_TMDB_API_TOKEN,
   },
 };
+
+export const IMG_CDN = "https://image.tmdb.org/t/p/w780";
