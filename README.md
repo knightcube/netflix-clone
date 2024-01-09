@@ -13,6 +13,11 @@
 - Deployed to Production 
     - Live Demo - https://netflix-clone-f7505.web.app/ 
 - Create SignUp User Account
+- Fetch movies data using TMDB API - https://developer.themoviedb.org/reference/movie-now-playing-list
+- Fetch trailer data using TMDB API 
+- Custom Hook for movies and trailer
+- Update Store with movies and trailer data 
+- Embedd YouTube video with autoplay and muted
 
 # Features
 
