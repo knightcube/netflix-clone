@@ -19,7 +19,7 @@
     - useRef
 - Firebase Setup
 - Deployed to Production 
-    - Live Demo - https://netflix-clone-f7505.web.app/ 
+    - Live Demo - https://netflix-clone-one-chi-28.vercel.app/
 - Create SignUp User Account
 - Fetch movies data using TMDB API - https://developer.themoviedb.org/reference/movie-now-playing-list
 - Fetch trailer data using TMDB API 
