@@ -6,7 +6,7 @@ export const checkValidData = (email, password)=>{
     const isPasswordValid = passwordRegex.test(password);
 
     if(!isEmailValid) return "Email is not valid";
-    if(!isPasswordValid) return "Password is not valid";
+    if(!isPasswordValid) return "Password must contain at least 8 characters. Password must contain at least 1 small letter, 1 capital letter, 1 number and 1 special symbol.";
 
     return null;
 }

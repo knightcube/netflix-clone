@@ -8,7 +8,7 @@ import {
   signInWithEmailAndPassword,
   updateProfile,
 } from "firebase/auth";
-import { useDispatch } from 'react-redux';
+import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
 
 const Login = () => {
@@ -39,14 +39,14 @@ const Login = () => {
         .then((userCredential) => {
           // Signed up
           const user = userCredential.user;
-          updateProfile(user,{
-            displayName:name.current.value
-          }).then(()=>{
-            const {uid, email, displayName} = auth.currentUser;
-            dispatch(addUser({uid:uid, email:email, displayName:displayName}));
-          })
-
-          
+          updateProfile(user, {
+            displayName: name.current.value,
+          }).then(() => {
+            const { uid, email, displayName } = auth.currentUser;
+            dispatch(
+              addUser({ uid: uid, email: email, displayName: displayName })
+            );
+          });
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -55,7 +55,11 @@ const Login = () => {
         });
     } else {
       // Sign in
-      signInWithEmailAndPassword(auth, email.current.value, password.current.value)
+      signInWithEmailAndPassword(
+        auth,
+        email.current.value,
+        password.current.value
+      )
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
@@ -114,7 +118,10 @@ const Login = () => {
           {isLoginForm ? "Sign In" : "Sign Up"}
         </button>
 
-        <p className="cursor-pointer" onClick={toggleForm}>
+        <p
+          className="cursor-pointer underline italic text-blue-400"
+          onClick={toggleForm}
+        >
           {isLoginForm
             ? "New to Netflix? Sign Up Now"
             : "Already registered? Sign In Now"}
