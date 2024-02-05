@@ -38,13 +38,13 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="absolute px-8 py-2 bg-gradient-to-b from-black w-full z-10 flex flex-col md:flex-row justify-between items-center">
-      <img className="md:w-52 " src={LOGO} alt="logo"></img>
+    <div className="absolute px-8 py-2 bg-gradient-to-b from-black w-full z-10 flex md:flex-row justify-between items-center">
+      <img className="w-32 md:w-52" src={LOGO} alt="logo"></img>
 
       <div>
         {auth.currentUser && (
           <button
-            className="bg-red-500 p-2 rounded-sm w-24"
+            className="bg-red-500 p-2 rounded-sm md:w-24"
             onClick={handleSignOut}
           >
             Sign Out

@@ -6,6 +6,7 @@ const MovieCard = ({ posterPath, id, movieItem }) => {
   const navigate = useNavigate();
 
   const handlePosterClick = () => {
+    console.log("Poster Clicked");
     navigate("/movies/" + movieItem.original_title + "/" + id);
   };
 

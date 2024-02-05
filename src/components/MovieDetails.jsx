@@ -6,11 +6,11 @@ import { useSelector } from "react-redux";
 import VideoTitle from "./VideoTitle";
 import MainContainer from "./MainContainer";
 import VideoBackground from "./VideoBackground";
+import Header from "./Header";
 
 const MovieDetails = () => {
   let { title, id } = useParams();
   useMovieTrailer(id);
-  const trailer = useSelector((store) => store.movies?.trailerVideo);
   const [overview, setOverview] = useState("");
 
   useEffect(() => {
@@ -21,7 +21,6 @@ const MovieDetails = () => {
       );
 
       const movieDetailsJSON = await movieDetailsData.json();
-      console.log(movieDetailsJSON.overview);
       setOverview(movieDetailsJSON.overview);
     };
 

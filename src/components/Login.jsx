@@ -77,7 +77,7 @@ const Login = () => {
       <Header />
       <div className="absolute">
         <img
-          className="h-screen object-cover md:h-fit"
+          className="h-screen w-screen object-cover"
           src="https://assets.nflxext.com/ffe/siteui/vlv3/c38a2d52-138e-48a3-ab68-36787ece46b3/eeb03fc9-99c6-438e-824d-32917ce55783/IN-en-20240101-popsignuptwoweeks-perspective_alpha_website_large.jpg"
           alt="background"
         ></img>
@@ -126,6 +126,14 @@ const Login = () => {
             ? "New to Netflix? Sign Up Now"
             : "Already registered? Sign In Now"}
         </p>
+
+        <div className="text-gray-400">
+          <h1 className="text-lg mt-5">
+            Casually browsing? Use the credentials below
+          </h1>
+          <p className="text-sm mt-2">Email - guest@example.com</p>
+          <p className="text-sm mt-2">Password - pass1234</p>
+        </div>
       </form>
     </div>
   );
