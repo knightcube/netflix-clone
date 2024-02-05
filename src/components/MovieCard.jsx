@@ -1,10 +1,22 @@
 import React from "react";
 import { IMG_CDN } from "../utils/constants";
+import { useNavigate } from "react-router-dom";
 
-const MovieCard = ({posterPath}) => {
+const MovieCard = ({ posterPath, id, movieItem }) => {
+  const navigate = useNavigate();
+
+  const handlePosterClick = () => {
+    navigate("/movies/" + movieItem.original_title + "/" + id);
+  };
+
   return (
     <div className="w-48 pr-2">
-      <img src={IMG_CDN+posterPath} alt="Image Poster" />
+      <img
+        className="cursor-pointer"
+        src={IMG_CDN + posterPath}
+        alt="Image Poster"
+        onClick={handlePosterClick}
+      />
     </div>
   );
 };
